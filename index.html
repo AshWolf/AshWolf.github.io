@@ -15,16 +15,11 @@
         <!-- <iframe src="https://docs.google.com/document/d/12v2sFn4czYFrhg_2nyCBrylsfRCnjNechIHYskjJKsg/edit?usp=sharing", height="1500" width="3000"></iframe> -->
     </div>
     <div>
-        <ul class="list-group">
-            <li class="list-group-item"><input type="checkbox" class="save-cb-state" name="mycheckbox" value="yes"> Must I save my state?</li>
-            <li class="list-group-item"><input type="checkbox" name="anothercheckbox" value="1"> Try and save this</li>
-            <li class="list-group-item"><input type="checkbox" class="save-cb-state" name="mycheckbox2" value="yes"> This can be saved as well.</li>
-          </ul>
         <div class="row">
             <div class="column">
                 <table>
                     <tr><th>AC</th><th>HP</th><th>Temp HP</th><th>Warlord</th><th>Wizard</th></tr>
-                    <tr><th>16</th><th><textarea maxlength = 2 rows = 1 cols = 2></textarea>/48</th><th><textarea maxlength = 2 rows = 1 cols = 2></textarea></th><th><input type="checkbox" class="save-cb-state" name="h1"><input type="checkbox" class="save-cb-state" name="h2"><input type="checkbox" class="save-cb-state" name="h3"></th><th><input type="checkbox" class="save-cb-state" name="h4"><input type="checkbox" class="save-cb-state" name="h5"><input type="checkbox" class="save-cb-state" name="h6"><input type="checkbox" class="save-cb-state" name="h7"></th></tr>
+                    <tr><th>16</th><th><input type = "text" id = "HP" maxlength = 2 rows = 1 cols = 2 onkeyup='saveValue(this);'></textarea>/48</th><th><textarea maxlength = 2 rows = 1 cols = 2></textarea></th><th><input type="checkbox" class="save-cb-state" name="h1"><input type="checkbox" class="save-cb-state" name="h2"><input type="checkbox" class="save-cb-state" name="h3"></th><th><input type="checkbox" class="save-cb-state" name="h4"><input type="checkbox" class="save-cb-state" name="h5"><input type="checkbox" class="save-cb-state" name="h6"><input type="checkbox" class="save-cb-state" name="h7"></th></tr>
                 </table>
                 <table>
                     <tr><th>Strength</th><th>Dexterity</th><th>Constitution</th><th>Intelligence</th><th>Wisdom</th><th>Charisma</th></tr>
@@ -49,7 +44,7 @@
                 <tr><td><a href = "https://www.dndbeyond.com/spells/toll-the-dead">Toll the Dead</a></td></tr>
                 <tr><td><a href = "https://www.dndbeyond.com/spells/guidance">Guidance</a></td></tr>
                 <tr><td><a href = "https://www.dndbeyond.com/spells/lightning-lure">Lightning Lure</a></td></tr>
-                <tr><th>1st Level<input type="checkbox" class="save-cb-state"><input type="checkbox" class="save-cb-state"><input type="checkbox" class="save-cb-state"><input type="checkbox" class="save-cb-state"></th></tr>
+                <tr><th>1st Level<input type="checkbox" class="save-cb-state" name="s11"><input type="checkbox" class="save-cb-state" name="s12"><input type="checkbox" class="save-cb-state" name="s13"><input type="checkbox" class="save-cb-state" name="s14"></th></tr>
                 <tr><td><a href = "https://www.dndbeyond.com/spells/absorb-elements">Absorb Elements</a></td></tr>
                 <tr><td><a href = "https://www.dndbeyond.com/spells/alarm">Alarm</a></td></tr>
                 <tr><td><a href = "https://www.dndbeyond.com/spells/disguise-self">Disguise Self</a></td></tr>
@@ -59,7 +54,7 @@
                 <tr><td><a href = "https://www.dndbeyond.com/spells/thunderwave">Thunderwave</a></td></tr>
                 <tr><td><a href = "https://www.dndbeyond.com/spells/unseen-servant">Unseen Servant</a></td></tr>
                 <tr><td><a href = "https://www.dndbeyond.com/spells/guiding-bolt">Guiding Bolt</a></td></tr>
-                <tr><th>2nd Level<input type="checkbox" class="save-cb-state"><input type="checkbox" class="save-cb-state"><input type="checkbox" class="save-cb-state"></th></tr>
+                <tr><th>2nd Level<input type="checkbox" class="save-cb-state" name="s21"><input type="checkbox" class="save-cb-state" name="s22"><input type="checkbox" class="save-cb-state" name="s23"></th></tr>
                 <tr><td><a href = "https://www.dndbeyond.com/spells/misty-step">Misty Step</a></td></tr>
                 <tr><td><a href = "https://www.dndbeyond.com/spells/flaming-sphere">Flaming Sphere</a></td></tr>
                 <tr><td><a href = "https://www.dndbeyond.com/spells/spike-growth">Spike Growth</a></td></tr>
@@ -81,7 +76,7 @@
         When you cast a spell using a spell slot that targets at least one creature, you can choose that creature or another creature within 30 feet of it (including yourself) and add one of the following effects:
         <b>Diminishing Function.</b> The chosen creature must succeed on a Wisdom saving throw against your spell save DC, or the creature must roll a d6 and subtract the number rolled from the next attack roll it takes before the start of your next turn.
         <b>Supplemental Function.</b> Once before the start of your next turn, the chosen creature can roll a d6 and add the number rolled to an attack roll or a saving throw of its choice. The creature can roll the d6 after rolling the d20 but must decide before any effects of the roll occur.
-        <h3>Leadership Dice<input type="checkbox" class="save-cb-state"><input type="checkbox" class="save-cb-state"><input type="checkbox" class="save-cb-state"></h3>
+        <h3>Leadership Dice<input type="checkbox" class="save-cb-state" name="l1"><input type="checkbox" class="save-cb-state" name="l2"><input type="checkbox" class="save-cb-state" name="l3"></h3>
         Starting at 2nd level, you have access to Leadership Dice.
         These represent your ability to focus your battlefield
         presence for powerful results. Your Warlord level determines
@@ -206,5 +201,24 @@
     }
   });
 })();
+</script>
+<script type="text/javascript">
+    document.getElementById("HP").value = getSavedValue("HP");    // set the value to this input   // set the value to this input
+    /* Here you can add more inputs to set value. if it's saved */
+
+    //Save the value function - save it to localStorage as (ID, VALUE)
+    function saveValue(e){
+        var id = e.id;  // get the sender's id to save it . 
+        var val = e.value; // get the value. 
+        localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override . 
+    }
+
+    //get the saved value function - return the value of "v" from localStorage. 
+    function getSavedValue  (v){
+        if (!localStorage.getItem(v)) {
+            return "";// You can change this to your defualt value. 
+        }
+        return localStorage.getItem(v);
+    }
 </script>
 </html>
