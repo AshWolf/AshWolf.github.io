@@ -19,13 +19,14 @@
             <div class="column">
                 <table>
                     <tr><th>AC</th><th>HP</th><th>Temp HP</th><th>Warlord</th><th>Wizard</th></tr>
-                    <tr><th>16</th><th><input type = "text" id = "HP" maxlength = 2 rows = 1 cols = 2 onkeyup='saveValue(this);'></textarea>/48</th><th><textarea maxlength = 2 rows = 1 cols = 2></textarea></th><th><input type="checkbox" class="save-cb-state" name="h1"><input type="checkbox" class="save-cb-state" name="h2"><input type="checkbox" class="save-cb-state" name="h3"></th><th><input type="checkbox" class="save-cb-state" name="h4"><input type="checkbox" class="save-cb-state" name="h5"><input type="checkbox" class="save-cb-state" name="h6"><input type="checkbox" class="save-cb-state" name="h7"></th></tr>
+                    <tr><th>16</th><th><input type = "text" id = "HP" size = 2 onkeyup='saveValue(this);'>/48</th><th><input type = "text" id = "TempHP" size = 2 onkeyup='saveValue(this);'></th><th><input type="checkbox" class="save-cb-state" name="h1"><input type="checkbox" class="save-cb-state" name="h2"><input type="checkbox" class="save-cb-state" name="h3"></th><th><input type="checkbox" class="save-cb-state" name="h4"><input type="checkbox" class="save-cb-state" name="h5"><input type="checkbox" class="save-cb-state" name="h6"><input type="checkbox" class="save-cb-state" name="h7"></th></tr>
                 </table>
                 <table>
                     <tr><th>Strength</th><th>Dexterity</th><th>Constitution</th><th>Intelligence</th><th>Wisdom</th><th>Charisma</th></tr>
                     <tr><th>-1</th><th>+1</th><th>+2</th><th>+4</th><th>+0</th><th>+2</th></tr>
                     <tr><th>8</th><th>12</th><th>14</th><th>18</th><th>10</th><th>14</th></tr>
                 </table>
+            <h2>Skill Proficiencies</h2>
             <table>
                 <tr><th>Skill</th><th>Bonus</th></tr>
                 <tr><td>Arcana</td><td>+7</td></tr>
@@ -37,6 +38,7 @@
                 <tr><td>Stealth</td><td>+4</td></tr>
                 <tr><td>Technology</td><td>+7</td></tr>
             </table>
+            <h2>Spells</h2>
             <table>
                 <tr><th>Cantrips</th></tr>
                 <tr><td><a href = "">On/Off</a></td></tr>
@@ -63,6 +65,9 @@
                 <tr><td><a href = "https://www.dndbeyond.com/spells/web">Web</a></td></tr>
                 <tr><td><a href = "https://www.dndbeyond.com/spells/detect-thoughts">Detect Thoughts</a></td></tr>
             </table>
+            <h2>Equipment</h2>
+            <input type = "text" id = "Gold" size = 6 onkeyup='saveValue(this);'> NGC
+            <input type = "text" id = "Gold" size = 6 onkeyup='saveValue(this);'>
             </div>
             <div class="column">
          <h2>Features</h2>
@@ -73,7 +78,7 @@
         combined level that is equal to or less than half your wizard level
         (rounded up), and none of the slots can be 6th level or higher.
         <h3>Functions of Probability</h3>
-        When you cast a spell using a spell slot that targets at least one creature, you can choose that creature or another creature within 30 feet of it (including yourself) and add one of the following effects:
+        When you cast a spell using a spell slot that targets at least one creature, you can choose that creature or another creature within 30 feet of it (including yourself) and add one of the following effects:<br>
         <b>Diminishing Function.</b> The chosen creature must succeed on a Wisdom saving throw against your spell save DC, or the creature must roll a d6 and subtract the number rolled from the next attack roll it takes before the start of your next turn.
         <b>Supplemental Function.</b> Once before the start of your next turn, the chosen creature can roll a d6 and add the number rolled to an attack roll or a saving throw of its choice. The creature can roll the d6 after rolling the d20 but must decide before any effects of the roll occur.
         <h3>Leadership Dice<input type="checkbox" class="save-cb-state" name="l1"><input type="checkbox" class="save-cb-state" name="l2"><input type="checkbox" class="save-cb-state" name="l3"></h3>
@@ -203,7 +208,8 @@
 })();
 </script>
 <script type="text/javascript">
-    document.getElementById("HP").value = getSavedValue("HP");    // set the value to this input   // set the value to this input
+    document.getElementById("HP").value = getSavedValue("HP");    // set the value to this input
+    document.getElementById("TempHP").value = getSavedValue("TempHP");    // set the value to this input
     /* Here you can add more inputs to set value. if it's saved */
 
     //Save the value function - save it to localStorage as (ID, VALUE)
