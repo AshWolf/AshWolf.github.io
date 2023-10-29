@@ -14,6 +14,13 @@
     <div>
         <!-- <iframe src="https://docs.google.com/document/d/12v2sFn4czYFrhg_2nyCBrylsfRCnjNechIHYskjJKsg/edit?usp=sharing", height="1500" width="3000"></iframe> -->
     </div>
+    <script>
+      let prepared = 0
+      document.getElementById('select').onclick = function() {
+        let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+        prepared = checkboxes.length
+    }
+    </script>
     <div>
         <div class="row">
             <div class="column">
@@ -237,12 +244,5 @@
         }
         return localStorage.getItem(v);
     }
-</script>
-<script>
-  let prepared = 0
-  document.getElementById('select').onclick = function() {
-    let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-    prepared = checkboxes.length
-}
 </script>
 </html>
