@@ -46,7 +46,7 @@
                 <tr><td><a href = "https://www.dndbeyond.com/spells/toll-the-dead">Toll the Dead</a></td></tr>
                 <tr><td><a href = "https://www.dndbeyond.com/spells/guidance">Guidance</a></td></tr>
                 <tr><td><a href = "https://www.dndbeyond.com/spells/lightning-lure">Lightning Lure</a></td></tr>
-                <tr><th>1st Level<input type="checkbox" class="save-cb-state" name="s11"><input type="checkbox" class="save-cb-state" name="s12"><input type="checkbox" class="save-cb-state" name="s13"><input type="checkbox" class="save-cb-state" name="s14"></th></tr>
+                <tr><th>1st Level<input type="checkbox" class="save-cb-state" name="s11"><input type="checkbox" class="save-cb-state" name="s12"><input type="checkbox" class="save-cb-state" name="s13"><input type="checkbox" class="save-cb-state" name="s14"><script>document.write(prepared)</script></th></tr>
                 <tr><td><a href = "https://www.dndbeyond.com/spells/absorb-elements">Absorb Elements</a></td><td><input type="checkbox" class="save-cb-state" name="p11"></td></tr>
                 <tr><td><a href = "https://www.dndbeyond.com/spells/alarm">Alarm</a></td><td><input type="checkbox" class="save-cb-state" name="p12"></td></tr>
                 <tr><td><a href = "https://www.dndbeyond.com/spells/disguise-self">Disguise Self</a></td><td><input type="checkbox" class="save-cb-state" name="p13"></td></tr>
@@ -71,10 +71,11 @@
                 <tr><td><a href = "https://www.dndbeyond.com/spells/haste">Haste</a></td><td><input type="checkbox" class="save-cb-state" name="p34"></td></tr>
                 <tr><td><a href = "https://www.dndbeyond.com/spells/hypnotic-pattern">Hypnotic Pattern</a></td><td><input type="checkbox" class="save-cb-state" name="p35"></td></tr>
             </table>
-            <h2>Equipment</h2><a href = "https://www.dndbeyond.com/monsters/3843454-osmir"><img src = Osmir.png style = "width:114px;height:79px;"></a>
+            <h2>Equipment<a href = "https://www.dndbeyond.com/monsters/3843454-osmir"><img src = Osmir.png style = "width:114px;height:79px;"></a></h2>
             <input type = "text" id = "Gold" size = 6 onkeyup='saveValue(this);'> NGC
-            Mind Sharpener<input type="checkbox" class="save-cb-state" name="em1"><input type="checkbox" class="save-cb-state" name="em2"><input type="checkbox" class="save-cb-state" name="em3"><input type="checkbox" class="save-cb-state" name="em4">
-            Staff of Minute Healing<input type="checkbox" class="save-cb-state" name="es1"><input type="checkbox" class="save-cb-state" name="es2"><input type="checkbox" class="save-cb-state" name="es3"><input type="checkbox" class="save-cb-state" name="es4">1 Hour Charging per Charge
+            <br>Mind Sharpener<input type="checkbox" class="save-cb-state" name="em1"><input type="checkbox" class="save-cb-state" name="em2"><input type="checkbox" class="save-cb-state" name="em3"><input type="checkbox" class="save-cb-state" name="em4">
+            <br>Staff of Minute Healing<input type="checkbox" class="save-cb-state" name="es1"><input type="checkbox" class="save-cb-state" name="es2"><input type="checkbox" class="save-cb-state" name="es3"><input type="checkbox" class="save-cb-state" name="es4"><input type="checkbox" class="save-cb-state" name="es5"><input type="checkbox" class="save-cb-state" name="es6">1 Hour Charging per Charge
+            <h2>Notes</h2>
             <br><input type = "text" id = "Notes" onkeyup='saveValue(this);'>
             </div>
             <div class="column">
@@ -236,5 +237,12 @@
         }
         return localStorage.getItem(v);
     }
+</script>
+<script>
+  let prepared = 0
+  document.getElementById('select').onclick = function() {
+    let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+    prepared = checkboxes.length
+}
 </script>
 </html>
