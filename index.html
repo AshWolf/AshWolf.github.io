@@ -15,10 +15,9 @@
         <!-- <iframe src="https://docs.google.com/document/d/12v2sFn4czYFrhg_2nyCBrylsfRCnjNechIHYskjJKsg/edit?usp=sharing", height="1500" width="3000"></iframe> -->
     </div>
     <script>
-      let prepared = 0
       document.getElementById('select').onclick = function() {
-        let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-        prepared = checkboxes.length
+	      let checkboxes = document.querySelectorAll('input[type="checkbox", id="spell"]:checked');
+        document.getElementById("numPrepared").innerHTML = checkboxes.length;
     }
     </script>
     <div>
@@ -47,14 +46,14 @@
             </table>
             <h2>Spells</h2>
             <table>
-                <button id = select>Count</button>
+                <button id = "select">Count</button>
                 <tr><th>Cantrips</th></tr>
                 <tr><td><a href = "">On/Off</a></td></tr>
                 <tr><td><a href = "https://www.dndbeyond.com/spells/message">Message</a></td></tr>
                 <tr><td><a href = "https://www.dndbeyond.com/spells/toll-the-dead">Toll the Dead</a></td></tr>
                 <tr><td><a href = "https://www.dndbeyond.com/spells/guidance">Guidance</a></td></tr>
                 <tr><td><a href = "https://www.dndbeyond.com/spells/lightning-lure">Lightning Lure</a></td></tr>
-                <tr><th>1st Level<input type="checkbox" class="save-cb-state" name="s11"><input type="checkbox" class="save-cb-state" name="s12"><input type="checkbox" class="save-cb-state" name="s13"><input type="checkbox" class="save-cb-state" name="s14"><script>document.write(prepared)</script></th></tr>
+                <tr><th>1st Level<input type="checkbox" class="save-cb-state" name="s11"><input type="checkbox" class="save-cb-state" name="s12"><input type="checkbox" class="save-cb-state" name="s13"><input type="checkbox" class="save-cb-state" name="s14"> <span id="numPrepared"></span></script></th></tr>
                 <tr><td><a href = "https://www.dndbeyond.com/spells/absorb-elements">Absorb Elements</a></td><td><input type="checkbox" class="save-cb-state" name="p11" id="prepare"></td></tr>
                 <tr><td><a href = "https://www.dndbeyond.com/spells/alarm">Alarm</a></td><td><input type="checkbox" class="save-cb-state" name="p12" id="prepare"></td></tr>
                 <tr><td><a href = "https://www.dndbeyond.com/spells/disguise-self">Disguise Self</a></td><td><input type="checkbox" class="save-cb-state" name="p13" id="prepare"></td></tr>
