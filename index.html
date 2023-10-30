@@ -14,12 +14,6 @@
     <div>
         <!-- <iframe src="https://docs.google.com/document/d/12v2sFn4czYFrhg_2nyCBrylsfRCnjNechIHYskjJKsg/edit?usp=sharing", height="1500" width="3000"></iframe> -->
     </div>
-    <script>
-      document.getElementById('select').onclick = function() {
-	      let checkboxes = document.querySelectorAll('input[type="checkbox"][id="prepare"]:checked');
-        document.getElementById("numPrepared").innerHTML = checkboxes.length;
-    }
-    </script>
     <div>
         <div class="row">
             <div class="column">
@@ -47,6 +41,12 @@
             <h2>Spells</h2>
             <table>
                 <button id = "select">Count</button>
+                <script>
+                  document.getElementById('select').onclick = function() {
+                    let checkboxes = document.querySelectorAll('input[type="checkbox"][id="prepare"]:checked');
+                    document.getElementById("numPrepared").innerHTML = checkboxes.length;
+                }
+                </script>
                 <tr><th>Cantrips</th></tr>
                 <tr><td><a href = "">On/Off</a></td></tr>
                 <tr><td><a href = "https://www.dndbeyond.com/spells/message">Message</a></td></tr>
