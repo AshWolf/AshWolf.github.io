@@ -18,8 +18,8 @@
         <div class="row">
             <div class="column">
                 <table>
-                    <tr><th>AC</th><th>HP</th><th>Temp HP</th><th>Warlord</th><th>Wizard</th></tr>
-                    <tr><th>16</th><th><input type = "text" id = "HP" size = 2 onkeyup='saveValue(this);'>/61</th><th><input type = "text" id = "TempHP" size = 2 onkeyup='saveValue(this);'></th><th><input type="checkbox" class="save-cb-state" name="ha1"><input type="checkbox" class="save-cb-state" name="ha2"><input type="checkbox" class="save-cb-state" name="ha3"><input type="checkbox" class="save-cb-state" name="ha4"></th><th><input type="checkbox" class="save-cb-state" name="hi1"><input type="checkbox" class="save-cb-state" name="hi2"><input type="checkbox" class="save-cb-state" name="hi3"><input type="checkbox" class="save-cb-state" name="hi4"><input type="checkbox" class="save-cb-state" name="hi5"></th></tr>
+                    <tr><th>AC</th><th>HP</th><th>Temp HP</th><th>Warlord (d8)</th><th>Wizard (d6)</th></tr>
+                    <tr><th>16</th><th><input type = "text" id = "HP" size = 2 onkeyup='saveValue(this);'>/68</th><th><input type = "text" id = "TempHP" size = 2 onkeyup='saveValue(this);'></th><th><input type="checkbox" class="save-cb-state" name="ha1"><input type="checkbox" class="save-cb-state" name="ha2"><input type="checkbox" class="save-cb-state" name="ha3"><input type="checkbox" class="save-cb-state" name="ha4"></th><th><input type="checkbox" class="save-cb-state" name="hi1"><input type="checkbox" class="save-cb-state" name="hi2"><input type="checkbox" class="save-cb-state" name="hi3"><input type="checkbox" class="save-cb-state" name="hi4"><input type="checkbox" class="save-cb-state" name="hi5"></th></tr>
                 </table>
                 <table>
                     <tr><th>Strength</th><th>Dexterity</th><th>Constitution</th><th>Intelligence</th><th>Wisdom</th><th>Charisma</th><th>       </th><th>WIS Saves</th><th>CHA Saves</th></tr>
@@ -99,7 +99,7 @@
         When you cast a spell using a spell slot that targets at least one creature, you can choose that creature or another creature within 30 feet of it (including yourself) and add one of the following effects:
         <br><b>Diminishing Function.</b> The chosen creature must succeed on a Wisdom saving throw against your spell save DC, or the creature must roll a d6 and subtract the number rolled from the next attack roll it takes before the start of your next turn.
         <br><b>Supplemental Function.</b> Once before the start of your next turn, the chosen creature can roll a d6 and add the number rolled to an attack roll or a saving throw of its choice. The creature can roll the d6 after rolling the d20 but must decide before any effects of the roll occur.
-        <h3>Leadership Dice<input type="checkbox" class="save-cb-state" name="l1"><input type="checkbox" class="save-cb-state" name="l2"><input type="checkbox" class="save-cb-state" name="l3"><input type="checkbox" class="save-cb-state" name="l4"></h3>
+        <h3>Leadership Dice<input type="checkbox" class="save-cb-state" name="l1"><input type="checkbox" class="save-cb-state" name="l2"><input type="checkbox" class="save-cb-state" name="l3"><input type="checkbox" class="save-cb-state" name="l4"><input type="checkbox" class="save-cb-state" name="l5"></h3>
         Starting at 2nd level, you have access to Leadership Dice.
         These represent your ability to focus your battlefield
         presence for powerful results. Your Warlord level determines
@@ -115,6 +115,10 @@
         A Leadership Die is expended when you use it. You regain
         all of your expended Leadership Dice when you finish a short
         or long rest.
+        <h3>Extra Attack</h3>
+        Beginning at 5th level, you can attack twice, instead of once,
+        whenever you take the Attack action on your turn. You can
+        use Battlefield Presence in place of either or both attacks.
                 <h2>Actions</h2>
         <h3>Battlefield Presence</h3>       
         Starting at 1st level, when you take the Attack action, in place
