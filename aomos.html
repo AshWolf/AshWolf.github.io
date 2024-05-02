@@ -1,0 +1,255 @@
+<html>
+    <title>Aomos</title>
+    <head>
+        <style>
+          .row {
+            display: flex;
+            }           
+
+            .column {
+            flex: 50%;
+            }
+        </style>
+        </head>
+    <div>
+        <!-- <iframe src="https://docs.google.com/document/d/12v2sFn4czYFrhg_2nyCBrylsfRCnjNechIHYskjJKsg/edit?usp=sharing", height="1500" width="3000"></iframe> -->
+    </div>
+    <div>
+        <div class="row">
+            <div class="column">
+                <table>
+                    <tr><th>AC</th><th>HP</th><th>Temp HP</th><th>Warlord (d8)</th><th>Wizard (d6)</th></tr>
+                    <tr><th>16</th><th><input type = "text" id = "HP" size = 2 onkeyup='saveValue(this);'>/68</th><th><input type = "text" id = "TempHP" size = 2 onkeyup='saveValue(this);'></th><th><input type="checkbox" class="save-cb-state" name="ha1"><input type="checkbox" class="save-cb-state" name="ha2"><input type="checkbox" class="save-cb-state" name="ha3"><input type="checkbox" class="save-cb-state" name="ha4"></th><th><input type="checkbox" class="save-cb-state" name="hi1"><input type="checkbox" class="save-cb-state" name="hi2"><input type="checkbox" class="save-cb-state" name="hi3"><input type="checkbox" class="save-cb-state" name="hi4"><input type="checkbox" class="save-cb-state" name="hi5"></th></tr>
+                </table>
+                <table>
+                    <tr><th>Strength</th><th>Dexterity</th><th>Constitution</th><th>Intelligence</th><th>Wisdom</th><th>Charisma</th><th>       </th><th>WIS Saves</th><th>CHA Saves</th></tr>
+                    <tr><th>-1</th><th>+1</th><th>+2</th><th>+5</th><th>+0</th><th>+2</th><th>  </th><th>+3</th><th>+5</th></tr>
+                    <tr><th>8</th><th>12</th><th>14</th><th>20</th><th>10</th><th>14</th><th>  </th><th>Advantage on</th><th>Poison</th></tr>
+                </table>
+            <h2>Skill Proficiencies</h2>
+            <table>
+                <tr><th>Skill</th><th>Bonus</th></tr>
+                <tr><td>Arcana</td><td>+9</td></tr>
+                <tr><td>Deception</td><td>+6</td></tr>
+                <tr><td>History</td><td>+9</td></tr>
+                <tr><td>Investigation</td><td>+13</td></tr>
+                <tr><td>Persuasion</td><td>+6</td></tr>
+                <tr><td>Religion</td><td>+9</td></tr>
+                <tr><td>Stealth</td><td>+5</td></tr>
+                <tr><td>Technology</td><td>+9</td></tr>
+            </table>
+            <h2>Spells</h2>
+            <table>
+                <button id = "select">Count</button>
+                <script>
+                  document.getElementById('select').onclick = function() {
+                    let checkboxes = document.querySelectorAll('input[type="checkbox"][id="prepare"]:checked');
+                    document.getElementById("numPrepared").innerHTML = checkboxes.length;
+                }
+                </script>
+                <tr><th>Cantrips</th></tr>
+                <tr><td><a href = "">On/Off</a></td></tr>
+                <tr><td><a href = "https://www.dndbeyond.com/spells/message">Message</a></td></tr>
+                <tr><td><a href = "https://www.dndbeyond.com/spells/toll-the-dead">Toll the Dead</a></td></tr>
+                <tr><td><a href = "https://www.dndbeyond.com/spells/guidance">Guidance</a></td></tr>
+                <tr><td><a href = "https://www.dndbeyond.com/spells/lightning-lure">Lightning Lure</a></td></tr>
+                <tr><th>1st Level<input type="checkbox" class="save-cb-state" name="s11"><input type="checkbox" class="save-cb-state" name="s12"><input type="checkbox" class="save-cb-state" name="s13"><input type="checkbox" class="save-cb-state" name="s14"> <span id="numPrepared"></span>/10</th></tr>
+                <tr><td><a href = "https://www.dndbeyond.com/spells/absorb-elements">Absorb Elements</a></td><td><input type="checkbox" class="save-cb-state" name="p11" id="prepare"></td></tr>
+                <tr><td><a href = "https://www.dndbeyond.com/spells/alarm">Alarm</a></td><td><input type="checkbox" class="save-cb-state" name="p12" id="prepare"></td></tr>
+                <tr><td><a href = "https://www.dndbeyond.com/spells/disguise-self">Disguise Self</a></td><td><input type="checkbox" class="save-cb-state" name="p13" id="prepare"></td></tr>
+                <tr><td><a href = "https://www.dndbeyond.com/spells/detect-magic">Detect Magic</a></td><td><input type="checkbox" class="save-cb-state" name="p19" id="prepare"></td></tr>
+                <tr><td><a href = "https://www.dndbeyond.com/spells/grease">Grease</a></td><td><input type="checkbox" class="save-cb-state" name="p14" id="prepare"></td></tr>
+                <tr><td><a href = "https://www.dndbeyond.com/spells/identify">Identify</a></td><td><input type="checkbox" class="save-cb-state" name="p15" id="prepare"></td></tr>
+                <tr><td><a href = "https://www.dndbeyond.com/spells/shield">Shield</a></td><td><input type="checkbox" class="save-cb-state" name="p16" id="prepare"></td></tr>
+                <tr><td><a href = "https://www.dndbeyond.com/spells/thunderwave">Thunderwave</a></td><td><input type="checkbox" class="save-cb-state" name="p17" id="prepare"></td></tr>
+                <tr><td><a href = "https://www.dndbeyond.com/spells/unseen-servant">Unseen Servant</a></td><td><input type="checkbox" class="save-cb-state" name="p18" id="prepare"></td></tr>
+                <tr><td><a href = "https://www.dndbeyond.com/spells/guiding-bolt">Guiding Bolt</a></td></tr>
+                <tr><th>2nd Level<input type="checkbox" class="save-cb-state" name="s21"><input type="checkbox" class="save-cb-state" name="s22"><input type="checkbox" class="save-cb-state" name="s23"></th></tr>
+                <tr><td><a href = "https://www.dndbeyond.com/spells/misty-step">Misty Step</a></td><td><input type="checkbox" class="save-cb-state" name="p21" id="prepare"></td></tr>
+                <tr><td><a href = "https://www.dndbeyond.com/spells/flaming-sphere">Flaming Sphere</a></td><td><input type="checkbox" class="save-cb-state" name="p22" id="prepare"></td></tr>
+                <tr><td><a href = "https://www.dndbeyond.com/spells/spike-growth">Spike Growth</a></td><td><input type="checkbox" class="save-cb-state" name="p23" id="prepare"></td></tr>
+                <tr><td><a href = "https://www.dndbeyond.com/spells/enlarge-reduce">Enlarge Reduce</a></td><td><input type="checkbox" class="save-cb-state" name="p24" id="prepare"></td></tr>
+                <tr><td><a href = "https://www.dndbeyond.com/spells/vortex-warp">Vortex Warp</a></td><td><input type="checkbox" class="save-cb-state" name="p25" id="prepare"></td></tr>
+                <tr><td><a href = "https://www.dndbeyond.com/spells/web">Web</a></td><td><input type="checkbox" class="save-cb-state" name="p26" id="prepare"></td></tr>
+                <tr><td><a href = "https://www.dndbeyond.com/spells/detect-thoughts">Detect Thoughts</a></td><td>&#x2611<input type="checkbox" class="save-cb-state" name="c1">/LR</td></tr>
+                <tr><th>3rd Level<input type="checkbox" class="save-cb-state" name="s31"><input type="checkbox" class="save-cb-state" name="s32"></th></tr>
+                <tr><td><a href = "">Dead Fog</a></td><td><input type="checkbox" class="save-cb-state" name="p31" id="prepare"></td></tr>
+                <tr><td><a href = "https://www.dndbeyond.com/spells/fireball">Fireball</a></td><td><input type="checkbox" class="save-cb-state" name="p32" id="prepare"></td></tr>
+                <tr><td><a href = "https://www.dndbeyond.com/spells/aura-of-vitality">Aura of Vitality</a></td><td><input type="checkbox" class="save-cb-state" name="p33" id="prepare"></td></tr>
+                <tr><td><a href = "https://www.dndbeyond.com/spells/haste">Haste</a></td><td><input type="checkbox" class="save-cb-state" name="p34" id="prepare"></td></tr>
+                <tr><td><a href = "https://www.dndbeyond.com/spells/hypnotic-pattern">Hypnotic Pattern</a></td><td><input type="checkbox" class="save-cb-state" name="p35" id="prepare"></td></tr>
+            </table>
+            <h2>Proficiencies</h2>
+            Common, Deep Speech, Celestial, Thieves Tools, Hacking Tools, (Secret) Game Shows
+            <h2>Equipment<a href = "https://www.dndbeyond.com/monsters/3843454-osmir"><img src = Osmir.png style = "width:114px;height:79px;"></a></h2>
+            <input type = "text" id = "Gold" size = 6 onkeyup='saveValue(this);'> NGC
+            <br>Mind Sharpener<input type="checkbox" class="save-cb-state" name="em1"><input type="checkbox" class="save-cb-state" name="em2"><input type="checkbox" class="save-cb-state" name="em3"><input type="checkbox" class="save-cb-state" name="em4">
+            <br>Staff of Minute Healing<input type="checkbox" class="save-cb-state" name="es1"><input type="checkbox" class="save-cb-state" name="es2"><input type="checkbox" class="save-cb-state" name="es3"><input type="checkbox" class="save-cb-state" name="es4"><input type="checkbox" class="save-cb-state" name="es5"><input type="checkbox" class="save-cb-state" name="es6">1 Hour Charging per Charge
+            <h2>Notes</h2>
+            <br><input type = "text" id = "Notes" onkeyup='saveValue(this);'>
+            </div>
+            <div class="column">
+         <h2>Features</h2>
+        <h3>Arcane Recovery</h3>
+        You have learned to regain some of your magical energy by studying
+        your spellbook. Once per day when you finish a short rest, you can
+        choose expended spell slots to recover. The spell slots can have a
+        combined level that is equal to or less than half your wizard level
+        (rounded up), and none of the slots can be 6th level or higher.
+        <h3>Functions of Probability</h3>
+        When you cast a spell using a spell slot that targets at least one creature, you can choose that creature or another creature within 30 feet of it (including yourself) and add one of the following effects:
+        <br><b>Diminishing Function.</b> The chosen creature must succeed on a Wisdom saving throw against your spell save DC, or the creature must roll a d6 and subtract the number rolled from the next attack roll it takes before the start of your next turn.
+        <br><b>Supplemental Function.</b> Once before the start of your next turn, the chosen creature can roll a d6 and add the number rolled to an attack roll or a saving throw of its choice. The creature can roll the d6 after rolling the d20 but must decide before any effects of the roll occur.
+        <h3>Leadership Dice<input type="checkbox" class="save-cb-state" name="l1"><input type="checkbox" class="save-cb-state" name="l2"><input type="checkbox" class="save-cb-state" name="l3"><input type="checkbox" class="save-cb-state" name="l4"><input type="checkbox" class="save-cb-state" name="l5"></h3>
+        Starting at 2nd level, you have access to Leadership Dice.
+        These represent your ability to focus your battlefield
+        presence for powerful results. Your Warlord level determines
+        the number and size of the dice, as shown on the Leadership
+        Dice column of the Warlord table. You can spend these to fuel
+        various features.
+        You know three such features: Rallying Mark, Urgent
+        Orders, and Helpful Word. When you get this feature, you can
+        spend one Leadership Die per turn. Starting at 6th level, you
+        can spend two Leadership Dice per turn. The number you
+        can expend increases to three at 11th level, and to four at
+        17th level.
+        A Leadership Die is expended when you use it. You regain
+        all of your expended Leadership Dice when you finish a short
+        or long rest.
+        <h3>Extra Attack</h3>
+        Beginning at 5th level, you can attack twice, instead of once,
+        whenever you take the Attack action on your turn. You can
+        use Battlefield Presence in place of either or both attacks.
+                <h2>Actions</h2>
+        <h3>Battlefield Presence</h3>       
+        Starting at 1st level, when you take the Attack action, in place
+        of making an attack, you can use your Battlefield Presence to
+        grant a friendly creature that can see or hear you an
+        additional attack the next time they take the Attack action
+        during their turn.
+        Any additional attacks granted that are unused at the start
+        of your next turn are lost. A friendly creature can only gain
+        one additional attack from this feature per round from this
+        feature.
+        <h3>Tactical Flexibility</h3>
+        Additionally at 3rd level, you gain the ability to use Tactical
+        Insight, Rallying Mark, Helpful Word, and Urgent Orders as
+        an action or a bonus action on your turn
+        <h2>Bonus Actions</h2>
+        <h3>Rallying Mark</h3>
+        As a bonus action, you can expend a number of Leadership
+        Dice (up to your per turn limit) to rally your allies to attack a
+        hostile creature within 60 feet of you.
+        The next time damage is rolled against that target by an
+        allied creature before the start of your next turn, they can add
+        the Leadership Dice to the damage roll, and the attacking
+        creature regains hit points equal to the amount rolled on the
+        Leadership Dice.
+        <h3>Urgent Orders</h3>
+        As a bonus action, you can expend a number of Leadership
+        Dice (up to your per turn limit) to guide your allies in
+        expeditious action.
+        Target an allied creature within 60 feet of you that can see
+        or hear you, that creature can immediately use its reaction to
+        move up to its movement speed (up to a maximum of 30 feet)
+        without provoking opportunity attacks. Roll the leadership
+        dice expended, the target gains temporary hit points equal to
+        the value rolled.
+        <h3>Helpful Word</h3>
+        As a bonus action, you can spend a Leadership Die to take
+        the Help action. When you use the Help action to aid an ally
+        in attacking a creature, the target of that attack can be within
+        30 feet of you, rather than within 5 feet of you, if your ally can
+        see or hear you.
+        <h3>Tactical Insight</h3>
+        On a success, you can see through their tactics, granting one
+        of the following effects:
+        <ul>
+        <li>Determine Attack: You can cause them to have
+        disadvantage on their next attack against a creature that
+        can see or hear you.</li>
+        <li>Predict Movement: You deduce where they are planning
+        to move on their next turn. They can choose to change
+        their plans, but if they move anywhere else, their
+        movement speed is reduced by 10 feet as they scramble to
+        adapt.</li>
+        <li>Outwit Response: You can find their openings, negating
+        their ability to use their reaction until the end of their next
+        turn.</li>
+        <li>Expose Weakness: You can use Helpful Word to grant
+        advantage against that target as part of the bonus action
+        without expending a Leadership Die.</li>
+        </ul>
+            </div>
+          </div>   
+    </div>
+    <script src="http://code.jquery.com/jquery.js"></script>
+<!-- This JavaScript file is required to load the XpressDox interview as well as the code required to run it -->
+ 
+<script>
+// Avoid scoping issues by encapsulating code inside anonymous function
+(function() {
+  // variable to store our current state
+  var cbstate;
+  
+  // bind to the onload event
+  window.addEventListener('load', function() {
+    // Get the current state from localstorage
+    // State is stored as a JSON string
+    cbstate = JSON.parse(localStorage['CBState'] || '{}');
+  
+    // Loop through state array and restore checked 
+    // state for matching elements
+    for(var i in cbstate) {
+      var el = document.querySelector('input[name="' + i + '"]');
+      if (el) el.checked = true;
+    }
+  
+    // Get all checkboxes that you want to monitor state for
+    var cb = document.getElementsByClassName('save-cb-state');
+  
+    // Loop through results and ...
+    for(var i = 0; i < cb.length; i++) {
+  
+      //bind click event handler
+      cb[i].addEventListener('click', function(evt) {
+        // If checkboxe is checked then save to state
+        if (this.checked) {
+          cbstate[this.name] = true;
+        }
+    
+    // Else remove from state
+        else if (cbstate[this.name]) {
+          delete cbstate[this.name];
+        }
+    
+    // Persist state
+        localStorage.CBState = JSON.stringify(cbstate);
+      });
+    }
+  });
+})();
+</script>
+<script type="text/javascript">
+    document.getElementById("HP").value = getSavedValue("HP");    // set the value to this input
+    document.getElementById("TempHP").value = getSavedValue("TempHP");    // set the value to this input
+    document.getElementById("Gold").value = getSavedValue("Gold");
+    document.getElementById("Notes").value = getSavedValue("Notes");
+    /* Here you can add more inputs to set value. if it's saved */
+
+    //Save the value function - save it to localStorage as (ID, VALUE)
+    function saveValue(e){
+        var id = e.id;  // get the sender's id to save it . 
+        var val = e.value; // get the value. 
+        localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override . 
+    }
+
+    //get the saved value function - return the value of "v" from localStorage. 
+    function getSavedValue  (v){
+        if (!localStorage.getItem(v)) {
+            return "";// You can change this to your defualt value. 
+        }
+        return localStorage.getItem(v);
+    }
+</script>
+</html>
