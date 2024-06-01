@@ -1175,7 +1175,7 @@
     "packages/shared/render/plugins/BaseSiteModules/webflow-brand.js"(exports, module) {
       "use strict";
       var Webflow = require_webflow_lib();
-      Webflow.define("brand", module.exports = function($) {
+      Webflow.define("brand", module.exports =function(){}, function($) {
         var api = {};
         var doc = document;
         var $html = $("html");
